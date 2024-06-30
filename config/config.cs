@@ -8,10 +8,17 @@ namespace GarbageCollectorStore
 {
     public static class Config
     {
-        public const int MinLoginLength = 4;
-        public const int MinPasswordLength = 5;
+        public const int MIN_LOGIN_LENGTH = 4;
+        public const int MIN_PASSWORD_LENGTH = 5;
+        public static string SuccessfulText(string text)
+        {
+            return $"\x1b[32m{text}\x1b[0m";
+        }
 
-
+        public static string ErrorText(string text)
+        {
+            return $"\x1b[91m{text}\x1b[0m";
+        }
 
     }
 }

@@ -28,34 +28,38 @@ namespace GarbageCollectorStore
             {
                 Console.WriteLine("Enter your login:");
                 string login = Console.ReadLine();
-                if(login.Length >= Config.MinLoginLength)
+                if(login.Length >= Config.MIN_LOGIN_LENGTH)
                 {
                     if (!isUserRegistered(login))
                     {
                         Console.WriteLine("Enter your password:");
                         string password = Console.ReadLine();
-                        if(password.Length >= Config.MinPasswordLength)
+                        if(password.Length >= Config.MIN_PASSWORD_LENGTH)
                         {
-                            //Admin admin = new Admin(login, password);
                             usersList.Insert(0, new Admin(login, password));
+                            Console.WriteLine(Config.SuccessfulText("You have successfully registered."));
+                            break;
                         }
                         else
                         {
-                            Console.WriteLine("Password length must be more than 5 characters.");
+                            Console.WriteLine(Config.ErrorText("Password length must be more than 5 characters."));
                         }                      
                     }
                     else
                     {
-                        Console.WriteLine("This login is already used.");
+                        Console.WriteLine(Config.ErrorText("This login is already used."));
                     }
                 }
                 else
                 {
-                    Console.WriteLine("Login length must be more than 4 characters.");
+                    Console.WriteLine(Config.ErrorText("Login length must be more than 4 characters."));
                 }
             }
         }
-
+        public void ShowAdmin()
+        {
+            Console.WriteLine(usersList[0]);
+        }
 
 
     }

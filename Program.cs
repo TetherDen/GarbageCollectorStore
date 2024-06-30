@@ -9,6 +9,7 @@ namespace GarbageCollectorStore
     {
         static void Main(string[] args)
         {
+
             Admin admin = new Admin("admin", "admin");
 
             // Products Electronics,Tools,Clothing,Sports
@@ -29,6 +30,9 @@ namespace GarbageCollectorStore
             Manager.RemoveProduct(prod4.Id);  // пока так,  guid
             Manager.ShowList();
 
+            UserManager userManager = new UserManager();  // TODO: ViewRegisteredUsers()
+            userManager.AdminRegister();
+            userManager.ShowAdmin();   //  admin should not have method to show ?
 
 
 

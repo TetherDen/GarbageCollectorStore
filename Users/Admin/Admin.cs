@@ -16,9 +16,13 @@ namespace GarbageCollectorStore
 
         public void ViewRegisteredUsers()
         {
-            // TODO: ViewRegisteredUsers()
+           
         }
 
+        public override string ToString()
+        {
+            return $"Login: {Login}, Password: {Password}\n";
+        }
 
     }
 }
