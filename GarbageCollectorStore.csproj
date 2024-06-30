@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Folder Include="config\" />
+    <Folder Include="Products\Sports\" />
   </ItemGroup>
 
 </Project>

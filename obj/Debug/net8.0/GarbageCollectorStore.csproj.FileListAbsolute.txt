@@ -1,0 +1,15 @@
+C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\bin\Debug\net8.0\GarbageCollectorStore.exe
+C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\bin\Debug\net8.0\GarbageCollectorStore.deps.json
+C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\bin\Debug\net8.0\GarbageCollectorStore.runtimeconfig.json
+C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\bin\Debug\net8.0\GarbageCollectorStore.dll
+C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\bin\Debug\net8.0\GarbageCollectorStore.pdb
+C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\obj\Debug\net8.0\GarbageCollectorStore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\obj\Debug\net8.0\GarbageCollectorStore.AssemblyInfoInputs.cache
+C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\obj\Debug\net8.0\GarbageCollectorStore.AssemblyInfo.cs
+C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\obj\Debug\net8.0\GarbageCollectorStore.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\obj\Debug\net8.0\GarbageCollectorStore.sourcelink.json
+C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\obj\Debug\net8.0\GarbageCollectorStore.dll
+C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\obj\Debug\net8.0\refint\GarbageCollectorStore.dll
+C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\obj\Debug\net8.0\GarbageCollectorStore.pdb
+C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\obj\Debug\net8.0\GarbageCollectorStore.genruntimeconfig.cache
+C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\obj\Debug\net8.0\ref\GarbageCollectorStore.dll
