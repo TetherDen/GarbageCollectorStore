@@ -18,5 +18,6 @@ namespace GarbageCollectorStore
             Password = password;
         }
 
+        //public abstract void Register();
     }
 }

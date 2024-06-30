@@ -1,4 +1,6 @@
-﻿using GarbageCollectorStore.Users.Admin;
+﻿using GarbageCollectorStore.Managers.ProductManager;
+//using GarbageCollectorStore.Managers.UserManager;
+//using GarbageCollectorStore.Users.Admin;
 using GarbageCollectorStore.Users.Customer;
 
 namespace GarbageCollectorStore
@@ -9,17 +11,28 @@ namespace GarbageCollectorStore
         {
             Admin admin = new Admin("admin", "admin");
 
+            // Products Electronics,Tools,Clothing,Sports
             Product prod1 = new Electronics("laptop", "Acer", "Aspire", 699.99, 5, "15.6 IPS (1920x1080) / Intel Core i5-12450H / RAM 16 / SSD 512");
-            Console.WriteLine(prod1);
-
             Product prod2 = new Tools("showel", "Showelator", 45.45, 10, "Multifunctional shovel");
-            Console.WriteLine(prod2);
-
             Product prod3 = new Clothing("cotton", "tshirt", 25.25, 20, "tshirtdesctription", "M", "S", "L", "XL");
-            Console.WriteLine(prod3);
-
             Product prod4 = new Sports("bike", "Hypercycle", 77.77, 3, "goodbike");
 
+            // Prod Manager
+            ProductManager Manager = new ProductManager();
+            Manager.AddProduct(prod1);
+            Manager.AddProduct(prod2);
+            Manager.AddProduct(prod3);
+            Manager.AddProduct(prod4);
+            //Manager.ShowList();
+            Manager.RemoveProduct(prod3);
+            //Manager.RemoveProduct("74e3527d-3d96-4689-a4ff-f1f60292037a");  // ff guid
+            Manager.RemoveProduct(prod4.Id);  // пока так,  guid
+            Manager.ShowList();
+
+
+
+
+            // TODO: Customer:  override ToString();
         }
     }
 }

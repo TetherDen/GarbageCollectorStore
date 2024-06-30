@@ -19,7 +19,7 @@ namespace GarbageCollectorStore
 
         public override string ToString()
         {
-            return $"ID: {Id}\nName: {Name}.  Brand: {Type}.\nPrice: {Price}.  Quantity: {Quantity}\nDescrition: {Description}\n";
+            return $"Name: {Name}.  Brand: {Type}.\nPrice: {Price}.  Quantity: {Quantity}\nDescrition: {Description}\nID: {Id}\n";
         }
     }
 }

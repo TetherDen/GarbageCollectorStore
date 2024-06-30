@@ -28,7 +28,7 @@ namespace GarbageCollectorStore
         public override string ToString()
         {
             string sizesString = string.Join(", ", Sizes.Select(s => s.ToString()));
-            return $"ID: {Id}\nName: {Name}.  Material: {Material}.  Sizes: {sizesString}.\nPrice: {Price}.  Quantity: {Quantity}\nDescrition: {Description}\n";
+            return $"Name: {Name}.  Material: {Material}.  Sizes: {sizesString}.\nPrice: {Price}.  Quantity: {Quantity}\nDescrition: {Description}\nID: {Id}\n";
         }
     }
 }
