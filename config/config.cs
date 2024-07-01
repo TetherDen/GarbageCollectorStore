@@ -8,6 +8,7 @@ namespace GarbageCollectorStore
 {
     public static class Config
     {
+        public const string STORE_NAME = "Garvage ColLector Store";
         public const int MIN_LOGIN_LENGTH = 4;
         public const int MIN_PASSWORD_LENGTH = 5;
         public static string SuccessfulText(string text)

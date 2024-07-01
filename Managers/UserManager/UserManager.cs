@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace GarbageCollectorStore
 {
-    internal class UserManager
+    internal static class UserManager
     {
-        private List<User> usersList = new List<User>();
+        private static List<User> usersList = new List<User>();
 
-        private bool isUserRegistered(string login)
+        private static bool isUserRegistered(string login)
         {
             foreach (var user in usersList)
             {
@@ -23,7 +23,7 @@ namespace GarbageCollectorStore
             return false;
         }
 
-        private (string,string) ValidateLoginPassword()
+        private static  (string,string) ValidateLoginPassword()
         {
             while (true)
             {
@@ -59,7 +59,7 @@ namespace GarbageCollectorStore
             }
         }
 
-        public void AdminRegister()
+        public static void AdminRegister()
         {
             (string login,string password) = ValidateLoginPassword();  // ( кортеж стрингов )
             if (login != null && password != null)
@@ -103,7 +103,14 @@ namespace GarbageCollectorStore
             //    }
             //}
         }
-        public void ShowAdmin()
+
+
+        public static bool isAdminRegistered()
+        {
+            return (usersList[0] is Admin);
+           
+        }
+        public static void ShowAdmin()   //  Maybe Hide or private
         {
             Console.WriteLine(usersList[0]);
         }

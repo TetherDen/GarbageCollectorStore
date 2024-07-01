@@ -3,6 +3,7 @@
 //using GarbageCollectorStore.Users.Admin;
 using GarbageCollectorStore.Users.Customer;
 
+
 namespace GarbageCollectorStore
 {
     internal class Program
@@ -26,14 +27,14 @@ namespace GarbageCollectorStore
             Manager.AddProduct(prod4);
             //Manager.ShowList();
             Manager.RemoveProduct(prod3);
-            //Manager.RemoveProduct("74e3527d-3d96-4689-a4ff-f1f60292037a");  // ff guid  // на каждом запуске новый guid пока-что
+            //Manager.RemoveProduct("74e3527d-3d96-4689-a4ff-f1f60292037a");  // ff guid  // на каждом запуске новый guid, пока-что
             Manager.RemoveProduct(prod4.Id);  // пока так,  guid в ID
             Manager.ShowList();
 
-            UserManager userManager = new UserManager();  // TODO: ViewRegisteredUsers()
-            userManager.AdminRegister();   //  в регистрации  логин и пароль проверки вынести в метод ( тк будут еще другие типы юзеров)
-            userManager.ShowAdmin();   //  admin should not have method to show ?
-
+            /*UserManager userManager = new UserManager(); */ // TODO: ViewRegisteredUsers()
+            UserManager.AdminRegister();   //  в регистрации  логин и пароль проверки вынести в метод ( тк будут еще другие типы юзеров)
+            UserManager.ShowAdmin();   //  admin should not have method to show ?
+            //Console.Write(userManager.isAdminRegistered());
 
 
             // TODO: Customer:  override ToString();
