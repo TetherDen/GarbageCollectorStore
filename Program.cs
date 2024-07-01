@@ -20,18 +20,18 @@ namespace GarbageCollectorStore
 
             // Prod Manager
             ProductManager Manager = new ProductManager();
-            Manager.AddProduct(prod1);
-            Manager.AddProduct(prod2);
-            Manager.AddProduct(prod3);
+            Manager.AddProduct(prod1);   // mb make overload +-
+            Manager.AddProduct(prod2);   // как будет адд в меню? guid или Obj, или в методе show юзеру давать фейк id 1,2,3,4 ?
+            Manager.AddProduct(prod3); //  add by id ( guid ) ?  ( сейчас obj ) 
             Manager.AddProduct(prod4);
             //Manager.ShowList();
             Manager.RemoveProduct(prod3);
-            //Manager.RemoveProduct("74e3527d-3d96-4689-a4ff-f1f60292037a");  // ff guid
-            Manager.RemoveProduct(prod4.Id);  // пока так,  guid
+            //Manager.RemoveProduct("74e3527d-3d96-4689-a4ff-f1f60292037a");  // ff guid  // на каждом запуске новый guid пока-что
+            Manager.RemoveProduct(prod4.Id);  // пока так,  guid в ID
             Manager.ShowList();
 
             UserManager userManager = new UserManager();  // TODO: ViewRegisteredUsers()
-            userManager.AdminRegister();
+            userManager.AdminRegister();   //  в регистрации  логин и пароль проверки вынести в метод ( тк будут еще другие типы юзеров)
             userManager.ShowAdmin();   //  admin should not have method to show ?
 
 

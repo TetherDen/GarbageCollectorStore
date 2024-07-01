@@ -14,7 +14,6 @@ namespace GarbageCollectorStore
         {
             return $"\x1b[32m{text}\x1b[0m";
         }
-
         public static string ErrorText(string text)
         {
             return $"\x1b[91m{text}\x1b[0m";
