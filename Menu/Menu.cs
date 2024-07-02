@@ -18,10 +18,10 @@ namespace GarbageCollectorStore
                 // TODO:  Admin Registretion
                 // Globaol Pointer?
                 Config.CurrentUser = UserManager.AdminRegister();
-                //if(Config.CurrentUser != null)
-                //{
-                //    Console.WriteLine(Config.SuccessfulText("You have successfully registered.")); 
-                //}
+                if (Config.CurrentUser != null)
+                {
+                    Console.WriteLine(Config.SuccessfulText("You have successfully registered."));
+                }
             }
 
             Console.WriteLine("Select an option:");
@@ -42,6 +42,12 @@ namespace GarbageCollectorStore
                     case "2":
                         {
                             // TODO: Register();
+                            Console.WriteLine("Create Account");
+                            Config.CurrentUser = UserManager.CustomerRegister();
+                            if (Config.CurrentUser != null)
+                            {
+                                Console.WriteLine(Config.SuccessfulText("You have successfully registered."));
+                            }
                             break;
                         }
                     case "0":

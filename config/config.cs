@@ -9,8 +9,7 @@ namespace GarbageCollectorStore
     internal static class Config
     {
         public const string STORE_NAME = "Garvage ColLector Store";
-        public const int MIN_LOGIN_LENGTH = 4;
-        public const int MIN_PASSWORD_LENGTH = 5;
+
 
         internal static User CurrentUser { get; set; } = null;
 
@@ -23,6 +22,11 @@ namespace GarbageCollectorStore
         {
             return $"\x1b[91m{text}\x1b[0m";
         }
+        public const int MIN_LOGIN_LENGTH = 4;
+        public const int MIN_PASSWORD_LENGTH = 5;
+        // Customer
+        public const int MIN_NAME_LENGTH = 3;
+        public const int MIN_ADDRESS_LENGTH = 3;
 
     }
 }
