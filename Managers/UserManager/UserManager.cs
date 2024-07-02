@@ -59,15 +59,17 @@ namespace GarbageCollectorStore
             }
         }
 
-        public static void AdminRegister()
+        public static Admin AdminRegister()
         {
             (string login,string password) = ValidateLoginPassword();  // ( кортеж стрингов )
             if (login != null && password != null)
             {
-                User admin = new Admin(login, password);
+                Admin admin = new Admin(login, password);
                 usersList.Insert(0, admin);
                 Console.WriteLine(Config.SuccessfulText("You have successfully registered."));
+                return admin;
             }
+            return null;
             // TODO: add throw?
 
 
@@ -107,12 +109,17 @@ namespace GarbageCollectorStore
 
         public static bool isAdminRegistered()
         {
-            return (usersList[0] is Admin);
-           
+            return usersList.Count > 0 && usersList[0] is Admin;
+
         }
         public static void ShowAdmin()   //  Maybe Hide or private
         {
-            Console.WriteLine(usersList[0]);
+            if (usersList.Count > 0 && usersList[0] is Admin)
+            {
+                Console.WriteLine(usersList[0]);
+            }
+            //  TODO:  else throw here ?
+
         }
 
 
