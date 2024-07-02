@@ -28,13 +28,13 @@ namespace GarbageCollectorStore
         {
             while (true)
             {
-                Console.WriteLine("Enter your login:");
+                Console.WriteLine(Config.RequestText("Enter your login:"));
                 string login = Console.ReadLine();
                 if (login.Length >= Config.MIN_LOGIN_LENGTH)
                 {
                     if (!isUserRegistered(login))
                     {
-                        Console.WriteLine("Enter your password:");
+                        Console.WriteLine(Config.RequestText("Enter your password:"));
                         string password = Console.ReadLine();
                         if (password.Length >= Config.MIN_PASSWORD_LENGTH)
                         {
@@ -107,7 +107,7 @@ namespace GarbageCollectorStore
             string name;
             while (true)
             {
-                Console.WriteLine("Enter your name:");
+                Console.WriteLine(Config.RequestText("Enter your name:"));
                 name = Console.ReadLine();
                 if (name.Length >= Config.MIN_NAME_LENGTH && Regex.IsMatch(name, @"^[a-zA-Z]+$"))
                 {
@@ -125,7 +125,7 @@ namespace GarbageCollectorStore
             string address;
             while (true)
             {
-                Console.WriteLine("Enter your address:");
+                Console.WriteLine(Config.RequestText("Enter your address:"));
                 address = Console.ReadLine();
                 if (address.Length >= Config.MIN_ADDRESS_LENGTH)
                 {
@@ -143,7 +143,7 @@ namespace GarbageCollectorStore
             string email;
             while (true)
             {
-                Console.WriteLine("Enter your email:");
+                Console.WriteLine(Config.RequestText("Enter your email:"));
                 email = Console.ReadLine();
                 if (Regex.IsMatch(email,Config.EMAIL_REGEX))
                 {
