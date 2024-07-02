@@ -24,13 +24,12 @@ namespace GarbageCollectorStore
                 }
             }
 
-            Console.WriteLine("Select an option:");
-            Console.WriteLine("1. Login");
-            Console.WriteLine("2. Register");
-            Console.WriteLine("0. Exit");
-
             while(true)
             {
+                Console.WriteLine("Select an option:");
+                Console.WriteLine("1. Login");
+                Console.WriteLine("2. Register");
+                Console.WriteLine("0. Exit");
                 string choice = Console.ReadLine();
                 switch (choice)
                 {
@@ -42,7 +41,7 @@ namespace GarbageCollectorStore
                     case "2":
                         {
                             // TODO: Register();
-                            Console.WriteLine("Create Account");
+                            Console.WriteLine("Creating an account");
                             Config.CurrentUser = UserManager.CustomerRegister();
                             if (Config.CurrentUser != null)
                             {

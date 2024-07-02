@@ -145,7 +145,7 @@ namespace GarbageCollectorStore
             {
                 Console.WriteLine("Enter your email:");
                 email = Console.ReadLine();
-                if (Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+                if (Regex.IsMatch(email,Config.EMAIL_REGEX))
                 {
                     break;
                 }

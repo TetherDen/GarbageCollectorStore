@@ -27,6 +27,8 @@ namespace GarbageCollectorStore
         // Customer
         public const int MIN_NAME_LENGTH = 3;
         public const int MIN_ADDRESS_LENGTH = 3;
+        //public const string EMAIL_REGEX = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+        public const string EMAIL_REGEX = @"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*"+ "@"+ @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$";
 
     }
 }
