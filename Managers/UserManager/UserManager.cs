@@ -94,7 +94,7 @@ namespace GarbageCollectorStore
             return null;
 
         }
-        //private static void RequestCustomerInformation()   // delete this method ?!
+        //private static void RequestCustomerInformation()   // remove this method ?!
         //{
         //    // TODO:
         //    //Console.WriteLine("Enter your address:");

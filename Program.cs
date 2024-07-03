@@ -11,9 +11,7 @@ namespace GarbageCollectorStore
         static void Main(string[] args)
         {
 
-            Menu.MainMenu();
-
-            //Admin admin = new Admin("admin", "admin");
+            Menu.MainMenu();  //  Text_color_of_message вынести в отдельный класс ?
 
             // Products Electronics,Tools,Clothing,Sports
             Product prod1 = new Electronics("laptop", "Acer", "Aspire", 699.99, 5, "15.6 IPS (1920x1080) / Intel Core i5-12450H / RAM 16 / SSD 512");
@@ -33,12 +31,12 @@ namespace GarbageCollectorStore
             Manager.RemoveProduct(prod4.Id);  // пока так,  guid в ID
             Manager.ShowList();
 
-            //User user = null;
-            /*UserManager userManager = new UserManager(); */ // TODO: ViewRegisteredUsers()
-   /*         user =  UserManager.AdminRegister(); */  //  в регистрации  логин и пароль проверки вынести в метод ( тк будут еще другие типы юзеров)
-/*            UserManager.ShowAdmin();   *///  admin should not have method to show ?
-            //Console.Write(userManager.isAdminRegistered());
 
+            /*UserManager userManager = new UserManager(); */ // TODO: ViewRegisteredUsers()
+/*            UserManager.ShowAdmin();   *///  admin should not have method to show ?
+            
+
+            //Console.Write(userManager.isAdminRegistered());
             // TODO: Customer:  override ToString();
         }
     }
