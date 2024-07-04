@@ -10,8 +10,8 @@ namespace GarbageCollectorStore
 {
     internal static class UserManager
     {
-        private static List<User> usersList = new List<User>();
-        public static List<User> UsersList { get { return usersList; } }
+        private static List<User> _usersList = new List<User>();
+        public static List<User> UsersList { get { return _usersList; } }
         internal static User CurrentUser { get; set; } = null;
         public static User Login()
         {
@@ -181,9 +181,9 @@ namespace GarbageCollectorStore
 
         public static void ShowAdmin()   //  Maybe Hide or private
         {
-            if (usersList.Count > 0 && usersList[0] is Admin)
+            if (_usersList.Count > 0 && _usersList[0] is Admin)
             {
-                Console.WriteLine(usersList[0]);
+                Console.WriteLine(_usersList[0]);
             }
             //  TODO:  else throw here ?
 

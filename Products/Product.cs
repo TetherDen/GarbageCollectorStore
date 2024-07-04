@@ -15,7 +15,7 @@ namespace GarbageCollectorStore
         public int Quantity { get; set; }
 
 
-        public Product(string name, decimal price, int quantity, string description)
+        protected Product(string name, decimal price, int quantity, string description)
         {
             Name = name;
             Price = price;

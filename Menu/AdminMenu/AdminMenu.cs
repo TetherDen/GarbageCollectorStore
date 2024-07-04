@@ -22,6 +22,9 @@ namespace GarbageCollectorStore
                 string choice = Console.ReadLine();
                 switch (choice)
                 {
+                //      Администратор:
+                //  -Управление товарами(добавление, редактирование, удаление, кол - во и тд)
+                //  - просматривать список зарегистрированных пользователей.
                     case "1":
                         // TODO: AddProduct();
                         break;
