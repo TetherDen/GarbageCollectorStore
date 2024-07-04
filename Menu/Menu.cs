@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GarbageCollectorStore.Managers.RegistrationManager;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
@@ -12,15 +13,15 @@ namespace GarbageCollectorStore
 
         public static void MainMenu()
         {
-            if (!UserManager.isAdminRegistered())
+            if (!RegistrationManager.isAdminRegistered())
             {
                 Console.WriteLine("     Admin registration required");
                 // TODO:  Admin Registretion
                 // Globaol Pointer?
-                Config.CurrentUser = UserManager.AdminRegister();
-                if (Config.CurrentUser != null)
+                UserManager.CurrentUser = RegistrationManager.AdminRegister();
+                if (UserManager.CurrentUser != null)
                 {
-                    Console.WriteLine(Config.SuccessfulText("You have successfully registered."));
+                    Console.WriteLine(TextColor.SuccessfulText("You have successfully registered."));
                 }
             }
 
@@ -36,16 +37,19 @@ namespace GarbageCollectorStore
                     case "1":
                         {
                             // TODO: Login()
+                            //TODO Admin/Customer MENU
+                            UserManager.CurrentUser = UserManager.Login();
                             break;
                         }
                     case "2":
                         {
                             // TODO: Register();
                             Console.WriteLine("Creating an account");
-                            Config.CurrentUser = UserManager.CustomerRegister();
-                            if (Config.CurrentUser != null)
+                            //Config.CurrentUser = UserManager.CustomerRegister();
+                            UserManager.CurrentUser = RegistrationManager.CustomerRegister();
+                            if (UserManager.CurrentUser != null)
                             {
-                                Console.WriteLine(Config.SuccessfulText("You have successfully registered."));
+                                Console.WriteLine(TextColor.SuccessfulText("You have successfully registered."));
                             }
                             break;
                         }
@@ -55,7 +59,7 @@ namespace GarbageCollectorStore
                         }
                     default:
                         {
-                            Console.WriteLine(Config.ErrorText("Invalid option. Please try again."));
+                            Console.WriteLine(TextColor.ErrorText("Invalid option. Please try again."));
                             continue;
                         }
                 }

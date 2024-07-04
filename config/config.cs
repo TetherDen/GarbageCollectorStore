@@ -11,21 +11,21 @@ namespace GarbageCollectorStore
         public const string STORE_NAME = "Garvage ColLector Store";
 
 
-        internal static User CurrentUser { get; set; } = null;
+        //internal static User CurrentUser { get; set; } = null;
 
 
-        public static string SuccessfulText(string text)  // Green color for successful messages
-        {
-            return $"\x1b[32m{text}\x1b[0m";
-        }
-        public static string ErrorText(string text)  // Red color for errors
-        {
-            return $"\x1b[91m{text}\x1b[0m";
-        }
-        public static string RequestText(string text) // Yellow color for input requests
-        {
-            return $"\x1b[33m{text}\x1b[0m";
-        }
+        //public static string SuccessfulText(string text)  // Green color for successful messages
+        //{
+        //    return $"\x1b[32m{text}\x1b[0m";
+        //}
+        //public static string ErrorText(string text)  // Red color for errors
+        //{
+        //    return $"\x1b[91m{text}\x1b[0m";
+        //}
+        //public static string RequestText(string text) // Yellow color for input requests
+        //{
+        //    return $"\x1b[33m{text}\x1b[0m";
+        //}
 
 
         public const int MIN_LOGIN_LENGTH = 4;
