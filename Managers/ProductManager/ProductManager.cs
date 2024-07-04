@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace GarbageCollectorStore.Managers.ProductManager
 {
-    internal class ProductManager
+    internal static class ProductManager  // static ?
     {
-        private List<Product> productList = new List<Product>();
+        private static List<Product> productList = new List<Product>();
 
-        public void AddProduct(Product product)
+        public static void AddProduct(Product product)
         {
             productList.Add(product);
         }
-        public void RemoveProduct(Product product)  //  Add remove by GUID ?
+        public static void RemoveProduct(Product product)  //  Add remove by GUID ?
         {
             productList.Remove(product);
         }
-        public void RemoveProduct(Guid productId)
+        public static void RemoveProduct(Guid productId)
         {
             var product = productList.Find(p => p.Id == productId);
             if (product != null)
@@ -26,7 +26,7 @@ namespace GarbageCollectorStore.Managers.ProductManager
                 productList.Remove(product);
             }
         }
-        public void RemoveProduct(string productId)
+        public static void RemoveProduct(string productId)
         {
             if (Guid.TryParse(productId, out Guid parsedId))
             {
@@ -35,21 +35,21 @@ namespace GarbageCollectorStore.Managers.ProductManager
             //  add else  throw ?
         }
 
-        public Product GetProduct(Guid productId)
+        public static Product GetProduct(Guid productId)
         {
             return productList.Find(p => p.Id == productId);
         }
 
-        public List<Product> GetProdList()
+        public static List<Product> GetProdList()
         {
             return productList;
         }
 
-        public void Clear()
+        public static void Clear()
         {
             productList.Clear();
         }
-        public void ShowList()
+        public static void ShowList()
         {
             foreach (var item in productList)
             {

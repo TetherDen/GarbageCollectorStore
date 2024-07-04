@@ -1,6 +1,8 @@
 ﻿using GarbageCollectorStore.Managers.RegistrationManager;
+using GarbageCollectorStore.Users.Customer;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design.Serialization;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
@@ -15,37 +17,46 @@ namespace GarbageCollectorStore
         {
             if (!RegistrationManager.isAdminRegistered())
             {
-                Console.WriteLine("     Admin registration required");
+                Console.WriteLine(TextColor.MenuText("     Admin registration required!"));
                 // TODO:  Admin Registretion
                 // Globaol Pointer?
                 UserManager.CurrentUser = RegistrationManager.AdminRegister();
                 if (UserManager.CurrentUser != null)
                 {
-                    Console.WriteLine(TextColor.SuccessfulText("You have successfully registered."));
+                    Console.WriteLine(TextColor.SuccessfulText("Admin have successfully registered."));
                 }
             }
 
             while(true)
             {
-                Console.WriteLine("Select an option:");
-                Console.WriteLine("1. Login");
-                Console.WriteLine("2. Register");
-                Console.WriteLine("0. Exit");
+                Console.WriteLine(TextColor.MenuText("Select an option:"));
+                Console.WriteLine(TextColor.MenuText("1. Login"));
+                Console.WriteLine(TextColor.MenuText("2. Register"));
+                Console.WriteLine(TextColor.MenuText("0. Exit"));
                 string choice = Console.ReadLine();
                 switch (choice)
                 {
                     case "1":
-                        {
-                            // TODO: Login()
-                            //TODO Admin/Customer MENU
+                        {                        
                             UserManager.CurrentUser = UserManager.Login();
+                            if(UserManager.CurrentUser != null)
+                            {
+                                if(UserManager.CurrentUser is Admin)
+                                {
+                                    //TODO Admin/Customer MENU
+                                    AdminMenu.MenuAdmin();
+                                }
+                                else if(UserManager.CurrentUser is Customer)
+                                {
+                                    //TODO: CUstomer Menu
+                                }
+                                
+                            }
                             break;
                         }
                     case "2":
                         {
-                            // TODO: Register();
                             Console.WriteLine("Creating an account");
-                            //Config.CurrentUser = UserManager.CustomerRegister();
                             UserManager.CurrentUser = RegistrationManager.CustomerRegister();
                             if (UserManager.CurrentUser != null)
                             {

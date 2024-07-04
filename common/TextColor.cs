@@ -20,6 +20,13 @@ namespace GarbageCollectorStore
         {
             return $"\x1b[33m{text}\x1b[0m";
         }
+        public static string MenuText(string text) // menu Text Grey ?
+        {
+            //return $"\x1b[36m{text}\x1b[0m";  //  Cyan color
+            return $"\x1b[1m{text}\x1b[0m";    // Bold ?
+
+
+        }
 
     }
 }
