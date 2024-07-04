@@ -25,14 +25,16 @@ namespace GarbageCollectorStore
                 //      Администратор:
                 //  -Управление товарами(добавление, редактирование, удаление, кол - во и тд)
                 //  - просматривать список зарегистрированных пользователей.
+                // add metod clear ?
+                //  add get id ?
                     case "1":
-                        // TODO: AddProduct();
+                        ProductManager.AddProductChoice();
                         break;
                     case "2":
                         // TODO: RemoveProduct();
                         break;
                     case "3":
-                        // TODO: ViewAllProducts();
+                        // TODO: ShowList  make better + colors? + change GUID ID on  fake ID
                         ProductManager.ShowList();
                         break;
                     case "4":

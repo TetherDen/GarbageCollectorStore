@@ -11,8 +11,8 @@ namespace GarbageCollectorStore
         public string Type {  get; set; }
         public string Model { get; set; }
 
-        public Electronics(string type, string model,string name, double price, int quantity, string description  ) 
-            : base (name,(decimal)price, quantity, description)
+        public Electronics(string type, string model,string name, decimal price, int quantity, string description  ) 
+            : base (name,price, quantity, description)
         {
             Type = type;
             Model = model;

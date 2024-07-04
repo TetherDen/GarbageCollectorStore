@@ -11,8 +11,8 @@ namespace GarbageCollectorStore
     {
         public string Type { get; set; }
 
-        public Tools(string type, string name, double price, int quantity, string description) 
-            : base(name, (decimal)price, quantity, description)
+        public Tools(string type, string name, decimal price, int quantity, string description) 
+            : base(name, price, quantity, description)
         {
             Type = type;
         }
