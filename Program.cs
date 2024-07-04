@@ -1,7 +1,5 @@
-﻿using GarbageCollectorStore.Managers.ProductManager;
-//using GarbageCollectorStore.Managers.UserManager;
-//using GarbageCollectorStore.Users.Admin;
-using GarbageCollectorStore.Users.Customer;
+﻿//using GarbageCollectorStore.Managers.ProductManager;
+//using GarbageCollectorStore.Users.Customer;
 
 
 namespace GarbageCollectorStore
@@ -25,9 +23,8 @@ namespace GarbageCollectorStore
             ProductManager.AddProduct(prod4);
 
 
-            Menu.MainMenu();  //  Text_color_of_message вынести в отдельный класс ?
+            Menu.MainMenu(); 
 
-            //Manager.ShowList();
             ProductManager.RemoveProduct(prod3);
             //Manager.RemoveProduct("74e3527d-3d96-4689-a4ff-f1f60292037a");  // ff guid  // на каждом запуске новый guid, пока-что
             ProductManager.RemoveProduct(prod4.Id);  // пока так,  guid в ID

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GarbageCollectorStore.Managers.ProductManager
+namespace GarbageCollectorStore
 {
     internal static class ProductManager  // static ?
     {
@@ -143,7 +143,7 @@ namespace GarbageCollectorStore.Managers.ProductManager
                 productList.Remove(product);
             }
         }
-        public static void RemoveProduct(string productId)
+        public static void RemoveProduct(string productId)  // string to GUID  who will use?
         {
             if (Guid.TryParse(productId, out Guid parsedId))
             {

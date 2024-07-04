@@ -69,8 +69,6 @@ namespace GarbageCollectorStore.Managers.RegistrationManager
                 return admin;
             }
             return null;
-            // TODO: add throw?
-
         }
         public static bool isAdminRegistered()
         {
