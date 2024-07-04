@@ -131,10 +131,6 @@ namespace GarbageCollectorStore
             AddProduct(tools);
             IsProductAdded(tools);
         }
-        public static void RemoveProduct(Product product)  //  Add remove by GUID ?
-        {
-            productList.Remove(product);
-        }
         public static void RemoveProduct(Guid productId)
         {
             var product = productList.Find(p => p.Id == productId);
@@ -142,14 +138,19 @@ namespace GarbageCollectorStore
             {
                 productList.Remove(product);
             }
-        }
-        public static void RemoveProduct(string productId)  // string to GUID  who will use?
+        }   // not using ?
+        public static void RemoveProduct(int index)   
         {
-            if (Guid.TryParse(productId, out Guid parsedId))
-            {
-                RemoveProduct(parsedId);
+            if (index > 0 && index <= productList.Count)
+            {    
+                Console.WriteLine(TextColor.SuccessfulText($" {productList[index-1].Name}, {productList[index - 1].Price} removed successfully."));
+                productList.RemoveAt(index - 1);
             }
-            //  add else  throw ?
+            else
+            {
+                Console.WriteLine(TextColor.ErrorText("Invalid ID. Please enter a valid ID."));
+            }
+
         }
 
         public static Product GetProduct(Guid productId)
@@ -168,10 +169,21 @@ namespace GarbageCollectorStore
         }
         public static void ShowList()   //
         {
-            foreach (var item in productList)
+            if(productList.Count > 0)
             {
-                Console.WriteLine(item);
+                int index = 1;
+                foreach (var item in productList)
+                {
+                    Console.Write($"ID {index}, ");
+                    Console.WriteLine(item);
+                    index++;
+                }
             }
+            else
+            {
+                Console.WriteLine(TextColor.InfoText("The product list is currently empty."));
+            }
+
         }
     }
 }

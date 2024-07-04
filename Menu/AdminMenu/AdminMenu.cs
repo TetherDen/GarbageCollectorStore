@@ -30,6 +30,15 @@ namespace GarbageCollectorStore
                         ProductManager.AddProductChoice();
                         break;
                     case "2":
+                        Console.WriteLine(TextColor.RequestText("Enter ID of the product to remove:"));
+                        if (int.TryParse(Console.ReadLine(), out int index))
+                        {
+                            ProductManager.RemoveProduct(index);
+                        }
+                        else
+                        {
+                            Console.WriteLine(TextColor.ErrorText("Invalid input. Please enter a valid ID."));
+                        }
                         // TODO: RemoveProduct();
                         break;
                     case "3":
