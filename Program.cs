@@ -17,16 +17,16 @@ namespace GarbageCollectorStore
             Product prod4 = new Sports("bike", "Hyper", (decimal)77.77, 3, "goodbike");
 
             // Prod Manager   //  TODO: after file system .AddProduct - make private method
-            //ProductManager.AddProduct(prod1);   // mb make overload +-
-            //ProductManager.AddProduct(prod2);   // как будет адд в меню? guid или Obj, или в методе show юзеру давать фейк id 1,2,3,4 ?
-            //ProductManager.AddProduct(prod3); //  add by id ( guid ) ?  ( сейчас obj ) 
-            //ProductManager.AddProduct(prod4);
+            ProductManager.AddProduct(prod1);   // mb make overload +-
+            ProductManager.AddProduct(prod2);   // как будет адд в меню? guid или Obj, или в методе show юзеру давать фейк id 1,2,3,4 ?
+            ProductManager.AddProduct(prod3); //  add by id ( guid ) ?  ( сейчас obj ) 
+            ProductManager.AddProduct(prod4);
 
 
             Menu.MainMenu(); 
 
             //Manager.RemoveProduct("74e3527d-3d96-4689-a4ff-f1f60292037a");  // ff guid  // на каждом запуске новый guid, пока-что
-            ProductManager.ShowList();
+            ProductManager.ShowList();  // ТАм надо у продуктов ToString пододелывать
 
             /*UserManager userManager = new UserManager(); */ // TODO: ViewRegisteredUsers()
 /*            UserManager.ShowAdmin();   *///  admin should not have method to show ?
