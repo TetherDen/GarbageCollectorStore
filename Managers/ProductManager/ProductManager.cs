@@ -174,7 +174,7 @@ namespace GarbageCollectorStore
                 int index = 1;
                 foreach (var item in productList)
                 {
-                    Console.Write($"ID {index}, ");
+                    Console.Write($"{TextColor.MenuText($"ID {index}, ")}");
                     Console.WriteLine(item);
                     index++;
                 }
@@ -183,7 +183,6 @@ namespace GarbageCollectorStore
             {
                 Console.WriteLine(TextColor.InfoText("The product list is currently empty."));
             }
-
         }
     }
 }
