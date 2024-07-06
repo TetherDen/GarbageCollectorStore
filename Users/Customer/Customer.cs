@@ -12,7 +12,7 @@ namespace GarbageCollectorStore.Users.Customer
         public string Address { get; set; }
         public string Email { get; set; }
 
-        public Customer (string login, string password) : base(login, password)
+        public Customer(string login, string password) : base(login, password)
         {
 
         }

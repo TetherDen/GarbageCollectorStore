@@ -11,7 +11,11 @@ namespace GarbageCollectorStore
     {
         public static  void SaveUsers()
         {
-            using (FileStream fs = new FileStream(Config.usersFilePath, FileMode.Create))
+            if(!Directory.Exists(Config.usersPathToDir))
+            {
+                Directory.CreateDirectory(Config.usersPathToDir);
+            }
+            using (FileStream fs = new FileStream(Config.usersPathToFile, FileMode.Create))
             {
                 using (BinaryWriter bw = new BinaryWriter(fs))
                 {
@@ -38,7 +42,36 @@ namespace GarbageCollectorStore
             }
         }
 
-
-
+        public static void LoadUsers()
+        {
+            if(File.Exists(Config.usersPathToFile))
+            {
+                using (FileStream fs = new FileStream(Config.usersPathToFile, FileMode.Open))
+                {
+                    using (BinaryReader br = new BinaryReader(fs))
+                    {
+                        while(fs.Length >br.BaseStream.Position)
+                        {
+                            string userType = br.ReadString();
+                            string login = br.ReadString();
+                            string password = br.ReadString();
+                            if (userType == "Customer")
+                            {
+                                string name = br.ReadString();
+                                string address = br.ReadString();
+                                string email = br.ReadString();
+                                Customer customer = new Customer(login, password, name, address, email);
+                                UserManager.UsersList.Add(customer);
+                            }
+                            else if (userType == "Admin")
+                            {
+                                Admin admin = new Admin(login, password);
+                                UserManager.UsersList.Insert(0, admin);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
