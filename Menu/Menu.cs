@@ -12,14 +12,11 @@ namespace GarbageCollectorStore
 {
     internal static class Menu
     {
-
         public static void MainMenu()
         {
             if (!RegistrationManager.isAdminRegistered())
             {
                 Console.WriteLine(TextColor.MenuText("     Admin registration required!"));
-                // TODO:  Admin Registretion
-                // Globaol Pointer?
                 UserManager.CurrentUser = RegistrationManager.AdminRegister();
                 if (UserManager.CurrentUser != null)
                 {
@@ -43,7 +40,6 @@ namespace GarbageCollectorStore
                             {
                                 if(UserManager.CurrentUser is Admin)
                                 {
-                                    //TODO Admin/Customer MENU
                                     AdminMenu.MenuAdmin();
                                 }
                                 else if(UserManager.CurrentUser is Customer)

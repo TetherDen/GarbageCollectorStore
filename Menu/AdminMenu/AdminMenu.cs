@@ -39,7 +39,6 @@ namespace GarbageCollectorStore
                         {
                             Console.WriteLine(TextColor.ErrorText("Invalid input. Please enter a valid ID."));
                         }
-                        // TODO: RemoveProduct();
                         break;
                     case "3":
                         // TODO: ShowList  make better + colors? + change GUID ID on  fake ID

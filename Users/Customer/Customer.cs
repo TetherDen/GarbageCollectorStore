@@ -21,7 +21,7 @@ namespace GarbageCollectorStore.Users.Customer
         }
         public override string ToString()
         {
-            return $"TODO: Customer ToString()";  // TODO:
+            return $"TODO: Customer ToString()";  // TODO: To String()
         }
 
     }

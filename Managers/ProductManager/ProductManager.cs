@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GarbageCollectorStore
 {
-    internal static class ProductManager  // static ?
+    internal static class ProductManager 
     {
         private static List<Product> _productList = new List<Product>();
         public static List<Product> ProductList { get { return _productList; } set { _productList = value; } }
