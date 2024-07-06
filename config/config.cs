@@ -20,7 +20,7 @@ namespace GarbageCollectorStore
         // Users File/Dir Pathes
         public const string usersPathToDir = "../../../data/";  // для папки 
         public static readonly string usersPathToFile = Path.Combine(usersPathToDir, "users.bin");  // для файла
-                                                                                                    // Products File/Dir Pathes
+        // Products File/Dir Pathes
         public const string productsPathToDir = "../../../data/";
         public static readonly string ProductsPathToFile = Path.Combine(productsPathToDir, "products.json");
 

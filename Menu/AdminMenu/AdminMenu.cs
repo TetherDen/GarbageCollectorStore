@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GarbageCollectorStore.common.Review;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,7 @@ namespace GarbageCollectorStore
                 Console.WriteLine(TextColor.MenuText("2. Remove Product"));
                 Console.WriteLine(TextColor.MenuText("3. View All Products"));
                 Console.WriteLine(TextColor.MenuText("4. View All Users"));
+                Console.WriteLine(TextColor.MenuText("5. Reviews"));  // reviews
                 Console.WriteLine(TextColor.MenuText("0. Logout"));
                 string choice = Console.ReadLine();
                 switch (choice)
@@ -46,6 +48,9 @@ namespace GarbageCollectorStore
                         break;
                     case "4":
                         // TODO: ViewAllUsers();
+                        break;
+                    case "5":
+                        ReviewMenu.MenuReview();
                         break;
                     case "0":
                         return;

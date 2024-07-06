@@ -44,7 +44,7 @@ namespace GarbageCollectorStore
                                 }
                                 else if(UserManager.CurrentUser is Customer)
                                 {
-                                    //TODO: CUstomer Menu
+                                    CustomerMenu.MenuCustomer();
                                 }
                                 
                             }
