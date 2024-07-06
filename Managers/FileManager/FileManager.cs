@@ -3,6 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
+using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace GarbageCollectorStore
@@ -71,6 +74,28 @@ namespace GarbageCollectorStore
                         }
                     }
                 }
+            }
+        }
+        public static void SaveProducts()
+        {
+            if (!Directory.Exists(Config.productsPathToDir))
+            {
+                Directory.CreateDirectory(Config.productsPathToDir);
+            }
+            string jsonStr = JsonConvert.SerializeObject(ProductManager.ProductList);
+            if(jsonStr.Length >0)
+            {
+                File.WriteAllText(Config.ProductsPathToFile, jsonStr);
+            }
+        }
+
+        public static void LoadProducts()
+        {
+            if(File.Exists(Config.ProductsPathToFile))
+            {
+                ProductManager.ProductList = JsonConvert.DeserializeObject<List<Product>>(File.ReadAllText(Config.ProductsPathToFile));
+                //string jsonStr = File.ReadAllText(Config.ProductsPathToFile);
+                //ProductManager.ProductList = JsonConvert.DeserializeObject<List<Product>>(jsonStr);
             }
         }
     }

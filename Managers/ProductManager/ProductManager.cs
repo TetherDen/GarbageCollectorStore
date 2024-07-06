@@ -8,7 +8,8 @@ namespace GarbageCollectorStore
 {
     internal static class ProductManager  // static ?
     {
-        private static List<Product> productList = new List<Product>();
+        private static List<Product> _productList = new List<Product>();
+        public static List<Product> ProductList { get { return _productList; } set { _productList = value; } }
 
         public static void AddProductChoice()
         {
@@ -46,11 +47,11 @@ namespace GarbageCollectorStore
         }
         public static void AddProduct(Product product)     // TODO: private
         {
-            productList.Add(product);
+            _productList.Add(product);
         }
         private static bool IsProductAdded(Product product)   // Проверка добавлен ли продукт в список
         {
-            if (productList.Any(p => p.Id == product.Id))
+            if (_productList.Any(p => p.Id == product.Id))
             {
                 Console.WriteLine(TextColor.SuccessfulText($"'{product.Name}' has been successfully added."));
                 return true;
@@ -133,18 +134,18 @@ namespace GarbageCollectorStore
         }
         public static void RemoveProduct(Guid productId)
         {
-            var product = productList.Find(p => p.Id == productId);
+            var product = _productList.Find(p => p.Id == productId);
             if (product != null)
             {
-                productList.Remove(product);
+                _productList.Remove(product);
             }
         }   // not using ?
         public static void RemoveProduct(int index)   
         {
-            if (index > 0 && index <= productList.Count)
+            if (index > 0 && index <= _productList.Count)
             {    
-                Console.WriteLine(TextColor.SuccessfulText($" {productList[index-1].Name}, {productList[index - 1].Price} removed successfully."));
-                productList.RemoveAt(index - 1);
+                Console.WriteLine(TextColor.SuccessfulText($" {_productList[index-1].Name}, {_productList[index - 1].Price} removed successfully."));
+                _productList.RemoveAt(index - 1);
             }
             else
             {
@@ -155,24 +156,24 @@ namespace GarbageCollectorStore
 
         public static Product GetProduct(Guid productId)
         {
-            return productList.Find(p => p.Id == productId);
-        }
+            return _productList.Find(p => p.Id == productId);
+        }  // not used
 
         public static List<Product> GetProdList()
         {
-            return productList;
+            return _productList;
         }
 
         public static void Clear()
         {
-            productList.Clear();
+            _productList.Clear();
         }
         public static void ShowList()   //
         {
-            if(productList.Count > 0)
+            if(_productList.Count > 0)
             {
                 int index = 1;
-                foreach (var item in productList)
+                foreach (var item in _productList)
                 {
                     Console.Write($"{TextColor.MenuText($"ID {index}, ")}");
                     Console.WriteLine(item);
