@@ -27,6 +27,7 @@
             FileManager.SaveReviews();
 
 
+
             ProductManager.ShowList();  // У продуктов ToString надо сделать красиво
 
             /*UserManager userManager = new UserManager(); */ // TODO: ViewRegisteredUsers()
