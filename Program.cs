@@ -19,7 +19,7 @@
             ProductManager.AddProduct(prod4);
 
             FileManager.LoadUsers();
-            //FileManager.LoadProducts();    // 
+            FileManager.LoadProducts();    // 
             FileManager.LoadReviews();
             Menu.MainMenu(); 
             FileManager.SaveUsers();

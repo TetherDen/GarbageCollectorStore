@@ -7,6 +7,7 @@ using System.Text.Json;
 using Newtonsoft.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 
 namespace GarbageCollectorStore
 {
@@ -76,28 +77,98 @@ namespace GarbageCollectorStore
                 }
             }
         }
+        //public static void SaveProducts()
+        //{
+        //    if (!Directory.Exists(Config.productsPathToDir))
+        //    {
+        //        Directory.CreateDirectory(Config.productsPathToDir);
+        //    }
+        //    string jsonStr = JsonConvert.SerializeObject(ProductManager.ProductList, Formatting.Indented);
+        //    if(jsonStr.Length >0)
+        //    {
+        //        File.WriteAllText(Config.productsPathToFile, jsonStr);
+        //    }
+        //}
+
+        //public static void LoadProducts()  // TODO: not working yeat
+        //{
+        //    if(File.Exists(Config.productsPathToFile))
+        //    {
+        //        ProductManager.ProductList = JsonConvert.DeserializeObject<List<Product>>(File.ReadAllText(Config.productsPathToFile));
+
+        //        //string jsonStr = File.ReadAllText(Config.ProductsPathToFile);
+        //        //ProductManager.ProductList = JsonConvert.DeserializeObject<List<Product>>(jsonStr);
+        //    }
+        //}
+
         public static void SaveProducts()
         {
             if (!Directory.Exists(Config.productsPathToDir))
             {
                 Directory.CreateDirectory(Config.productsPathToDir);
             }
-            string jsonStr = JsonConvert.SerializeObject(ProductManager.ProductList, Formatting.Indented);
-            if(jsonStr.Length >0)
+
+            List<object> productsWithMetadata = new List<object>();
+            foreach (var product in ProductManager.ProductList)
             {
-                File.WriteAllText(Config.productsPathToFile, jsonStr);
+                if (product is Clothing)
+                {
+                    productsWithMetadata.Add(new { Type = "Clothing", Data = product });
+                }
+                else if (product is Electronics)
+                {
+                    productsWithMetadata.Add(new { Type = "Electronics", Data = product });
+                }
+                else if (product is Sports)
+                {
+                    productsWithMetadata.Add(new { Type = "Sports", Data = product });
+                }
+                else if (product is Tools)
+                {
+                    productsWithMetadata.Add(new { Type = "Tools", Data = product });
+                }
+            }
+            string jsonStr = JsonConvert.SerializeObject(productsWithMetadata, Formatting.Indented);
+            File.WriteAllText(Config.productsPathToFile, jsonStr);
+        }
+        public static void LoadProducts()
+        {
+            if (File.Exists(Config.productsPathToFile))
+            {
+                string jsonStr = File.ReadAllText(Config.productsPathToFile);
+                List<object> productsWithMetadata = JsonConvert.DeserializeObject<List<object>>(jsonStr);
+
+                List<Product> productList = new List<Product>();
+                foreach (var item in productsWithMetadata)
+                {
+                    string type = JObject.FromObject(item)["Type"].ToString();
+                    JObject data = JObject.FromObject(item)["Data"] as JObject;
+
+                    switch (type)
+                    {
+                        case "Clothing":
+                            productList.Add(data.ToObject<Clothing>());
+                            break;
+                        case "Electronics":
+                            productList.Add(data.ToObject<Electronics>());
+                            break;
+                        case "Sports":
+                            productList.Add(data.ToObject<Sports>());
+                            break;
+                        case "Tools":
+                            productList.Add(data.ToObject<Tools>());
+                            break;
+                        default:
+                            Console.WriteLine($"Unknown product type: {type}");
+                            break;
+                    }
+                }
+                ProductManager.ProductList = productList;
             }
         }
 
-        public static void LoadProducts()  // TODO: not working yeat
-        {
-            if(File.Exists(Config.productsPathToFile))
-            {
-                ProductManager.ProductList = JsonConvert.DeserializeObject<List<Product>>(File.ReadAllText(Config.productsPathToFile));
-                //string jsonStr = File.ReadAllText(Config.ProductsPathToFile);
-                //ProductManager.ProductList = JsonConvert.DeserializeObject<List<Product>>(jsonStr);
-            }
-        }
+
+
 
         public static void SaveReviews()
         {

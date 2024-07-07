@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace GarbageCollectorStore
 {
@@ -11,7 +12,7 @@ namespace GarbageCollectorStore
     {
         public string Material {  get; set; }
         public List<string> Sizes { get; set; }
-
+        [JsonConstructor]
         public Clothing(string material, string name, decimal price, int quantity, string description, List<string> sizes)
             : base(name, price, quantity, description)
         {

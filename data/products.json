@@ -1,41 +1,64 @@
 [
   {
-    "Type": "laptop",
-    "Model": "Acer",
-    "Id": "a6a538aa-5f80-4d09-b256-e44848807527",
-    "Name": "Aspire",
-    "Price": 699.99,
-    "Description": "15.6 IPS (1920x1080) / Intel Core i5-12450H / RAM 16 / SSD 512",
-    "Quantity": 5
+    "Type": "Electronics",
+    "Data": {
+      "Type": "laptop",
+      "Model": "Acer",
+      "Id": "09e8524f-0637-4ecd-b496-d840fb63f7c4",
+      "Name": "Aspire",
+      "Price": 699.99,
+      "Description": "15.6 IPS (1920x1080) / Intel Core i5-12450H / RAM 16 / SSD 512",
+      "Quantity": 5
+    }
   },
   {
-    "Type": "showel",
-    "Id": "28c267a8-9e30-4c8a-ac5c-132979f6bab9",
-    "Name": "Showelator",
-    "Price": 45.45,
-    "Description": "Multifunctional shovel",
-    "Quantity": 10
+    "Type": "Tools",
+    "Data": {
+      "Type": "showel",
+      "Id": "c8c8f072-86aa-419b-95dc-586d620ee5e0",
+      "Name": "Showelator",
+      "Price": 45.45,
+      "Description": "Multifunctional shovel",
+      "Quantity": 10
+    }
   },
   {
-    "Material": "cotton",
-    "Sizes": [
-      "M",
-      "S",
-      "L",
-      "XL"
-    ],
-    "Id": "9df9d7e5-c3de-48db-b2b7-87b55f829586",
-    "Name": "tshirt",
-    "Price": 25.25,
-    "Description": "tshirtdesctription",
-    "Quantity": 20
+    "Type": "Clothing",
+    "Data": {
+      "Material": "cotton",
+      "Sizes": [
+        "M",
+        "S",
+        "L",
+        "XL"
+      ],
+      "Id": "7e082f8e-95d0-4479-a336-705e9de8d096",
+      "Name": "tshirt",
+      "Price": 25.25,
+      "Description": "tshirtdesctription",
+      "Quantity": 20
+    }
   },
   {
-    "Type": "bike",
-    "Id": "f2998449-61a4-4064-b95b-969a50981f92",
-    "Name": "Hyper",
-    "Price": 77.77,
-    "Description": "goodbike",
-    "Quantity": 3
+    "Type": "Sports",
+    "Data": {
+      "Type": "bike",
+      "Id": "03c823b9-615c-48c6-94ef-f03fcce1d176",
+      "Name": "Hyper",
+      "Price": 77.77,
+      "Description": "goodbike",
+      "Quantity": 3
+    }
+  },
+  {
+    "Type": "Tools",
+    "Data": {
+      "Type": "Hand tool",
+      "Id": "91436248-5e8c-4563-9e1a-a00be2f8384c",
+      "Name": "Hammer",
+      "Price": 19.99,
+      "Description": "Hand tool",
+      "Quantity": 10
+    }
   }
 ]
