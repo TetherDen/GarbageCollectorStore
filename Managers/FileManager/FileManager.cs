@@ -82,21 +82,43 @@ namespace GarbageCollectorStore
             {
                 Directory.CreateDirectory(Config.productsPathToDir);
             }
-            string jsonStr = JsonConvert.SerializeObject(ProductManager.ProductList);
+            string jsonStr = JsonConvert.SerializeObject(ProductManager.ProductList, Formatting.Indented);
             if(jsonStr.Length >0)
             {
-                File.WriteAllText(Config.ProductsPathToFile, jsonStr);
+                File.WriteAllText(Config.productsPathToFile, jsonStr);
             }
         }
 
-        public static void LoadProducts()
+        public static void LoadProducts()  // TODO: not working yeat
         {
-            if(File.Exists(Config.ProductsPathToFile))
+            if(File.Exists(Config.productsPathToFile))
             {
-                ProductManager.ProductList = JsonConvert.DeserializeObject<List<Product>>(File.ReadAllText(Config.ProductsPathToFile));
+                ProductManager.ProductList = JsonConvert.DeserializeObject<List<Product>>(File.ReadAllText(Config.productsPathToFile));
                 //string jsonStr = File.ReadAllText(Config.ProductsPathToFile);
                 //ProductManager.ProductList = JsonConvert.DeserializeObject<List<Product>>(jsonStr);
             }
         }
+
+        public static void SaveReviews()
+        {
+            if(!Directory.Exists(Config.reviewsPathToDir))
+            {
+                Directory.CreateDirectory(Config.reviewsPathToDir);
+            }
+            string jsonStr = JsonConvert.SerializeObject(Review.AllReviews, Formatting.Indented);
+            if(jsonStr.Length >0)
+            {
+                File.WriteAllText(Config.reviewsPathToFile, jsonStr);
+            }
+        }
+        public static void LoadReviews()
+        {
+            if(File.Exists(Config.reviewsPathToFile))
+            {
+                Review.AllReviews = JsonConvert.DeserializeObject<List<Review>>(File.ReadAllText(Config.reviewsPathToFile));
+            }
+        }
+
+
     }
 }

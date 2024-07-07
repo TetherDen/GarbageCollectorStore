@@ -1,0 +1,20 @@
+[
+  {
+    "ReviewText": "this is new review",
+    "Date": "2024-07-07T16:42:55.9356779+03:00",
+    "IsRead": true,
+    "User": "dwadwa"
+  },
+  {
+    "ReviewText": "testing new review",
+    "Date": "2024-07-07T16:42:55.9459597+03:00",
+    "IsRead": true,
+    "User": "dwadwa"
+  },
+  {
+    "ReviewText": "review n3",
+    "Date": "2024-07-07T16:42:55.9459738+03:00",
+    "IsRead": true,
+    "User": "dwadwa"
+  }
+]

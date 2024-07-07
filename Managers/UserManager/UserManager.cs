@@ -32,13 +32,13 @@ namespace GarbageCollectorStore
         }
 
 
-        public static void ShowAdmin()   //  TODO: hide or remove
+        public static void ShowAdmin()   //  TODO: Hide or remove
         {
             if (_usersList.Count > 0 && _usersList[0] is Admin)
             {
                 Console.WriteLine(_usersList[0]);
             }
-            //  TODO:  else here ?
+            //  TODO:  Else here ?
         }
 
     }

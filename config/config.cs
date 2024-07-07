@@ -22,8 +22,9 @@ namespace GarbageCollectorStore
         public static readonly string usersPathToFile = Path.Combine(usersPathToDir, "users.bin");  // для файла
         // Products File/Dir Pathes
         public const string productsPathToDir = "../../../data/";
-        public static readonly string ProductsPathToFile = Path.Combine(productsPathToDir, "products.json");
-
-
+        public static readonly string productsPathToFile = Path.Combine(productsPathToDir, "products.json");
+        // Reviews File/Dir Path
+        public const string reviewsPathToDir = "../../../data/";
+        public static readonly string reviewsPathToFile = Path.Combine(reviewsPathToDir, "reviews.json");
     }
 }

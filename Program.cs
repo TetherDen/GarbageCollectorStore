@@ -20,9 +20,11 @@
 
             FileManager.LoadUsers();
             //FileManager.LoadProducts();    // 
+            FileManager.LoadReviews();
             Menu.MainMenu(); 
             FileManager.SaveUsers();
             FileManager.SaveProducts();
+            FileManager.SaveReviews();
 
 
             ProductManager.ShowList();  // У продуктов ToString надо сделать красиво

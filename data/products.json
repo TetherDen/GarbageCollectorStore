@@ -1,1 +1,41 @@
-[{"Type":"laptop","Model":"Acer","Id":"0a41c14b-b6db-4afc-a84c-4fee6d9f29ce","Name":"Aspire","Price":699.99,"Description":"15.6 IPS (1920x1080) / Intel Core i5-12450H / RAM 16 / SSD 512","Quantity":5},{"Type":"showel","Id":"b316b416-7a0f-4ee5-ab56-e051aad8d04b","Name":"Showelator","Price":45.45,"Description":"Multifunctional shovel","Quantity":10},{"Material":"cotton","Sizes":["M","S","L","XL"],"Id":"88ab9f0c-e154-4d7a-8762-8dd8d3f35c01","Name":"tshirt","Price":25.25,"Description":"tshirtdesctription","Quantity":20},{"Type":"bike","Id":"dcf45d20-b3e9-4b02-897a-17ba34f5b317","Name":"Hyper","Price":77.77,"Description":"goodbike","Quantity":3}]
+[
+  {
+    "Type": "laptop",
+    "Model": "Acer",
+    "Id": "a6a538aa-5f80-4d09-b256-e44848807527",
+    "Name": "Aspire",
+    "Price": 699.99,
+    "Description": "15.6 IPS (1920x1080) / Intel Core i5-12450H / RAM 16 / SSD 512",
+    "Quantity": 5
+  },
+  {
+    "Type": "showel",
+    "Id": "28c267a8-9e30-4c8a-ac5c-132979f6bab9",
+    "Name": "Showelator",
+    "Price": 45.45,
+    "Description": "Multifunctional shovel",
+    "Quantity": 10
+  },
+  {
+    "Material": "cotton",
+    "Sizes": [
+      "M",
+      "S",
+      "L",
+      "XL"
+    ],
+    "Id": "9df9d7e5-c3de-48db-b2b7-87b55f829586",
+    "Name": "tshirt",
+    "Price": 25.25,
+    "Description": "tshirtdesctription",
+    "Quantity": 20
+  },
+  {
+    "Type": "bike",
+    "Id": "f2998449-61a4-4064-b95b-969a50981f92",
+    "Name": "Hyper",
+    "Price": 77.77,
+    "Description": "goodbike",
+    "Quantity": 3
+  }
+]

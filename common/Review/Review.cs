@@ -4,20 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GarbageCollectorStore.common.Review
+namespace GarbageCollectorStore
 {
     internal class Review
     {
         public string ReviewText { get; set; }
         public DateTime Date { get; } = DateTime.Now;
         public bool IsRead { get; set; } = false;
-        public string UserLogin { get; set; }
+        public string User { get; set; }
         public static List<Review> AllReviews = new List<Review>();
 
         public Review(string reviewText, string userLogin)
         {
             ReviewText = reviewText;
-            UserLogin = userLogin;  
+            User = userLogin;  
         }
 
         public static void LeaveReview()
@@ -32,7 +32,7 @@ namespace GarbageCollectorStore.common.Review
             Console.WriteLine(TextColor.MenuText("All Reviews:"));
             foreach (var review in Review.AllReviews)
             {
-                Console.WriteLine($"{review.Date}, Customer: {review.UserLogin}\n{review.ReviewText}\n");
+                Console.WriteLine($"{review.Date}, Customer: {review.User}\n{review.ReviewText}\n");
                 review.IsRead = true;
             }
         }
@@ -43,7 +43,7 @@ namespace GarbageCollectorStore.common.Review
             {
                 if (!review.IsRead)
                 {
-                    Console.WriteLine($"{review.Date}, Customer: {review.UserLogin}\n{review.ReviewText}\n");
+                    Console.WriteLine($"{review.Date}, Customer: {review.User}\n{review.ReviewText}\n");
                     review.IsRead = true;
                 }
             }
