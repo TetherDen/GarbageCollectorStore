@@ -4,7 +4,7 @@
     "Data": {
       "Type": "laptop",
       "Model": "Acer",
-      "Id": "09e8524f-0637-4ecd-b496-d840fb63f7c4",
+      "Id": "7bd21456-ab2e-4aca-aa83-71eef5d3c05d",
       "Name": "Aspire",
       "Price": 699.99,
       "Description": "15.6 IPS (1920x1080) / Intel Core i5-12450H / RAM 16 / SSD 512",
@@ -15,7 +15,7 @@
     "Type": "Tools",
     "Data": {
       "Type": "showel",
-      "Id": "c8c8f072-86aa-419b-95dc-586d620ee5e0",
+      "Id": "a567f465-6699-4533-86b4-1e7392266584",
       "Name": "Showelator",
       "Price": 45.45,
       "Description": "Multifunctional shovel",
@@ -32,7 +32,7 @@
         "L",
         "XL"
       ],
-      "Id": "7e082f8e-95d0-4479-a336-705e9de8d096",
+      "Id": "e0ebae50-3383-49be-859b-f6e2826c24f0",
       "Name": "tshirt",
       "Price": 25.25,
       "Description": "tshirtdesctription",
@@ -43,7 +43,7 @@
     "Type": "Sports",
     "Data": {
       "Type": "bike",
-      "Id": "03c823b9-615c-48c6-94ef-f03fcce1d176",
+      "Id": "eccb71df-6a72-4e83-b6c6-4e08c0a29336",
       "Name": "Hyper",
       "Price": 77.77,
       "Description": "goodbike",
@@ -54,11 +54,23 @@
     "Type": "Tools",
     "Data": {
       "Type": "Hand tool",
-      "Id": "91436248-5e8c-4563-9e1a-a00be2f8384c",
+      "Id": "1e412292-6358-4e8b-b1c1-19129b1bc5d7",
       "Name": "Hammer",
       "Price": 19.99,
       "Description": "Hand tool",
       "Quantity": 10
+    }
+  },
+  {
+    "Type": "Electronics",
+    "Data": {
+      "Type": "the best",
+      "Model": "16",
+      "Id": "6d5730fd-3872-4150-aaf5-1b4a4501de6f",
+      "Name": "Iphone",
+      "Price": 500.0,
+      "Description": "this is telephone",
+      "Quantity": 5
     }
   }
 ]

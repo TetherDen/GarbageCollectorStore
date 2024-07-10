@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UmRo0o+MpV0=",
+  "dgSpecHash": "Zos9spMy/6FDovc06K2Xjtc6did5q9aEie8Ofj0WBnC0uXQI6KW1U77HRYR/mT4jZWr1Qr8tkalO+8RE/CgnvQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\source\\repos\\C#_NET_Lessons\\GarbageCollectorStore\\GarbageCollectorStore.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\admin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
-  ],
+  "projectFilePath": "D:\\pojects\\С#\\Ekzamen\\GarbageCollectorStore\\GarbageCollectorStore.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
