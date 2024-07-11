@@ -16,3 +16,7 @@ C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\obj\Debug\net8.
 C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\obj\Debug\net8.0\GarbageCollectorStore.csproj.AssemblyReference.cache
 C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\obj\Debug\net8.0\GarbageC.D135087A.Up2Date
+C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\bin\Debug\net8.0\nlog.config
+C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\bin\Debug\net8.0\NLog.dll
+C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\obj\Debug\net8.0\GarbageCollectorStore.Properties.Resources.resources
+C:\Users\admin\source\repos\C#_NET_Lessons\GarbageCollectorStore\obj\Debug\net8.0\GarbageCollectorStore.csproj.GenerateResource.cache

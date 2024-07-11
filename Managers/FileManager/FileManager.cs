@@ -84,15 +84,15 @@ namespace GarbageCollectorStore
         //        Directory.CreateDirectory(Config.productsPathToDir);
         //    }
         //    string jsonStr = JsonConvert.SerializeObject(ProductManager.ProductList, Formatting.Indented);
-        //    if(jsonStr.Length >0)
-        //    {
-        //        File.WriteAllText(Config.productsPathToFile, jsonStr);
-        //    }
+        //if(jsonStr.Length >0)
+        //{
+        //    File.WriteAllText(Config.productsPathToFile, jsonStr);
+        //}
         //}
 
         //public static void LoadProducts()  // TODO: not working yeat
         //{
-        //    if(File.Exists(Config.productsPathToFile))
+        //    if (File.Exists(Config.productsPathToFile))
         //    {
         //        ProductManager.ProductList = JsonConvert.DeserializeObject<List<Product>>(File.ReadAllText(Config.productsPathToFile));
 
@@ -129,7 +129,11 @@ namespace GarbageCollectorStore
                 }
             }
             string jsonStr = JsonConvert.SerializeObject(productsWithMetadata, Formatting.Indented);
-            File.WriteAllText(Config.productsPathToFile, jsonStr);
+            if (jsonStr.Length > 0)
+            {
+                File.WriteAllText(Config.productsPathToFile, jsonStr);
+            }
+
         }
         public static void LoadProducts()
         {

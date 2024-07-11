@@ -12,6 +12,8 @@ namespace GarbageCollectorStore
     {
         public string Material {  get; set; }
         public List<string> Sizes { get; set; }
+
+        public Clothing() { }
         [JsonConstructor]
         public Clothing(string material, string name, decimal price, int quantity, string description, List<string> sizes)
             : base(name, price, quantity, description)
@@ -20,7 +22,7 @@ namespace GarbageCollectorStore
             Sizes = new List<string>(sizes);
         }
         public Clothing(string material, string name, decimal price, int quantity, string description, params string[]  sizes)
-    : base(name, price, quantity, description)
+            : base(name, price, quantity, description)
         {
             Material = material;
             Sizes = new List<string>(sizes);
@@ -34,6 +36,16 @@ namespace GarbageCollectorStore
             return sb.Append($"Name: {Name}, Material: {Material}, Sizes: {sizesString}\n")
                 .Append($"Price: {Price}, Quantity: {Quantity}")
                 .Append($"\nDescription: {Description}\n").ToString();
+        }
+        public Clothing(Clothing other)
+            : base(other.Name, other.Price, other.Quantity, other.Description)
+        {
+            Material = other.Material;
+            Sizes = new List<string>(other.Sizes);
+        }
+        public override Product Clone()
+        {
+            return new Clothing(this);
         }
     }
 }

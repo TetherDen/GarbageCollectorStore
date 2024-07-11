@@ -14,7 +14,7 @@ namespace GarbageCollectorStore
         public string Description { get; set; }
         public int Quantity { get; set; }
 
-
+        public Product() { }
         protected Product(string name, decimal price, int quantity, string description)
         {
             Name = name;
@@ -22,5 +22,7 @@ namespace GarbageCollectorStore
             Quantity = quantity;
             Description = description;
         }
+
+        public abstract Product Clone();
     }
 }
