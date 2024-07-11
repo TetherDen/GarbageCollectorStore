@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +11,7 @@ namespace GarbageCollectorStore.Users.Customer
         public string Name { get; set; }
         public string Address { get; set; }
         public string Email { get; set; }
+        public Cart Cart { get; } = new Cart();
 
         public Customer(string login, string password) : base(login, password) { }
         public Customer (string login, string password,string name, string address, string email) : base(login, password)
@@ -18,6 +19,7 @@ namespace GarbageCollectorStore.Users.Customer
             Name = name;
             Address = address;
             Email = email;
+
         }
         public override string ToString()
         {
