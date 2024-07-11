@@ -1,25 +1,26 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace GarbageCollectorStore
 {
-    internal class Tools : Product
+    public abstract class Product
     {
-        public string Type { get; set; }
+        public Guid Id { get; } = Guid.NewGuid();
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public string Description { get; set; }
+        public int Quantity { get; set; }
 
-        public Tools(string type, string name, decimal price, int quantity, string description) 
-            : base(name, price, quantity, description)
-        {
-            Type = type;
-        }
 
-        public override string ToString()
+        protected Product(string name, decimal price, int quantity, string description)
         {
-            return $"Name: {Name}.  Brand: {Type}.  \nPrice: {Price}.  Quantity: {Quantity}\nDescrition: {Description}\nID: {Id}\n";
+            Name = name;
+            Price = price;
+            Quantity = quantity;
+            Description = description;
         }
     }
 }
