@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GarbageCollectorStore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< Updated upstream
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f64bb0cb864ac0cae934fbbffaa82215f7d4b46")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79f7d1fce9fb17d10e685669ec75ce6765b8b6d8")]
->>>>>>> Stashed changes
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a5e91835e3bbbc58df64cce73aa774b629b76a55")]
 [assembly: System.Reflection.AssemblyProductAttribute("GarbageCollectorStore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GarbageCollectorStore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

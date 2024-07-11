@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GarbageCollectorStore.Users.Customer;
+using NLog.LayoutRenderers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,6 +32,7 @@ namespace GarbageCollectorStore
                         break;
                     case "3":
                         // TODO: ViewCart();
+                        //(UserManager.CurrentUser as Customer).ViewCart()
                         break;
                     case "4":
                         // TODO: Checkout();
