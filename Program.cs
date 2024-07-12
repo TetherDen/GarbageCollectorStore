@@ -1,5 +1,5 @@
-﻿using NLog;
-using Newtonsoft.Json;
+﻿//using NLog;
+//using Newtonsoft.Json;
 using System.Net;
 namespace GarbageCollectorStore
 {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -12,7 +12,7 @@ namespace GarbageCollectorStore
         public string Type { get; set; }
 
         public Tools() { }
-        public Tools(string type, string name, decimal price, int quantity, string description) 
+        public Tools(string type, string name, decimal price, int quantity, string description)
             : base(name, price, quantity, description)
         {
             Type = type;

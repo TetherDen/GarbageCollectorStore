@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GarbageCollectorStore
 {
-    internal abstract class Product
+    public abstract class Product
     {
         public Guid Id { get; } = Guid.NewGuid();
         public string Name { get; set; }

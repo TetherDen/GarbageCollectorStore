@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,7 +31,7 @@ namespace GarbageCollectorStore
                     case "2":
                         AddElectronics();
                         break;
-                    case "3":
+                    case "3":  
                         AddSports();
                         break;
                     case "4":
