@@ -11,7 +11,7 @@ namespace GarbageCollectorStore
     public class Cart
     {
         private List<Product> _itemsCart = new List<Product>();
-        public List<Product> ItemCart { get { return _itemsCart; }}
+        public List<Product> ItemCart { get { return _itemsCart; } set { _itemsCart = value; } }
         public void AddProductToCart()
         {
             int ID;
@@ -19,7 +19,11 @@ namespace GarbageCollectorStore
             bool isWorked = true;
             Console.WriteLine("Напиши номер продукта");
             int.TryParse(Console.ReadLine(), out ID);
-            _itemsCart.Add(ProductManager.ProductList[ID - 1]);
+
+            //_itemsCart.Add(ProductManager.ProductList[ID - 1]);
+            _itemsCart.Add(ProductManager.ProductList[ID - 1].Clone());
+            //_itemsCart.Add(ProductManager.ProductList[ID - 1].Id);
+            _itemsCart[_itemsCart.Count - 1].Id = ProductManager.ProductList[ID - 1].Id;
 
             while (isWorked)
             {
@@ -59,10 +63,12 @@ namespace GarbageCollectorStore
             }
             else
             {
+                int index = 1;
                 foreach (Product item in _itemsCart)
                 {
-                    Console.WriteLine($"ID: {item.Id} Продукт: {item.Name}, Количество: {item.Quantity}\n");
+                    Console.WriteLine($"ID: {index} Продукт: {item.Name}, Количество: {item.Quantity}\n");
                     //Console.WriteLine($"ID: {(item as Product).Id} Продукт: {(item as Product).Name}, Количество: {(item as Product).Quantity}\n");
+                    index ++;
                 }
             }
         }
@@ -78,8 +84,8 @@ namespace GarbageCollectorStore
                     {
                         case 1:
                             Console.WriteLine("Заказ оформлен и оплачен.");
+                            deleteFromProdList();
                             _itemsCart.Clear();
-
                             break;
                         case 2:
                             Console.WriteLine("Оплата отменена.");
